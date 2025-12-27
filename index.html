@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Levario — Home</title>
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+
+
 <!-- External CSS -->
 <link rel="stylesheet" href="style.css">
 
@@ -14,34 +18,36 @@
 
 <body>
 
-<!-- HEADER / NAV -->
+<!-- HEADER -->
 <header>
-  <div style="display:flex;align-items:center;gap:18px">
-    <div class="logo" onclick="navigate('home')">Levario</div>
-    <nav style="display:flex;align-items:center">
-      <a href="home.html" class="active">Home</a>
-      <a href="programs.html">Programs</a>
-      <a href="about.html">About</a>
-      <a href="trainers.html">Trainers</a>
-      <a href="admissions.html">Admissions</a>
-      <a href="faq.html">FAQ</a>
-      <a href="career.html">Career</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-  <div style="display:flex;align-items:center;gap:12px">
-    <a href="programs.html" class="btn">Enroll Now</a>
+  <!-- LEFT: Logo -->
+ <a href="index.html" class="header-left">
+  <img 
+    src="images/Levario Logo.png" 
+    alt="Levario Logo" 
+    class="logo"
+  >
+</a>
+
+  <!-- CENTER: Navigation -->
+  <nav class="header-center">
+    <a href="index.html" class="active">Home</a> 
+    <a href="programs.html">Programs</a> 
+    <a href="about.html">About</a>
+    <a href="trainers.html">Trainers</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="faq.html">FAQ</a>
+    <a href="career.html">Career</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- RIGHT: Auth Button -->
+  <div class="header-right">
+    <div id="auth-button"></div>
   </div>
 </header>
 
-<!-- ROTATING CIRCLE -->
-<div class="page-circle">
-  <div class="circle-ring"></div>
-  <div class="circle-inner">
-    <strong>Growth</strong>
-    <small>Accelerate</small>
-  </div>
-</div>
+
 
 <!-- HOME SECTION -->
 <section id="home" class="active">
@@ -53,13 +59,46 @@
 
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
         <a href="programs.html" class="btn">View Programs</a>
-        <a href="contact.html" class="btn" style="background:linear-gradient(135deg,var(--accent),var(--primary));">Free Orientation</a>
+        <a href="contact.html" class="btn">Free Orientation</a>
       </div>
     </div>
 
-    <div class="hero-art">
-      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=60" alt="virtual training">
-    </div>
+
+<!-- HERO ROTATING LV LOGO -->
+<div class="hero-art">
+
+  <div class="rotating-wrapper">
+
+    <!-- Rotating circular text -->
+    <svg viewBox="0 0 300 300" class="rotating-text">
+      <defs>
+        <path id="circlePath"
+          d="M150,150
+             m-120,0
+             a120,120 0 1,1 240,0
+             a120,120 0 1,1 -240,0" />
+      </defs>
+
+    <text
+      font-size="12"
+      letter-spacing="2"
+      textLength="750"
+      lengthAdjust="spacing"
+      >
+      <textPath href="#circlePath">
+      LEVARIO · AN EARNED ASCENT · LEVARIO · AN EARNED ASCENT · 
+      </textPath>
+    </text>
+
+    </svg>
+
+    <!-- Center LV image -->
+    <img src="images/LV.png" alt="Levario LV" class="lv-image">
+
+  </div>
+
+</div>
+
   </div>
 
   <!-- ABOUT HOME -->
